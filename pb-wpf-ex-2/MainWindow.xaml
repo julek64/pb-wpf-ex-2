@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pb_wpf_ex_2"
         mc:Ignorable="d"
-        Title="Prenumerata" Height="450" Width="800" FontSize="20">
+        Title="Prenumerata" Height="450" Width="800" FontSize="12">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
@@ -141,39 +140,48 @@
         </Grid>
         <Grid
             Grid.Row="2">
-            <StackPanel
-                Orientation="Horizontal">
-                <Label
-                    Content="Zgoda na:"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Margin="5"/>
-                <CheckBox
-                    Content="przetwarzanie danych"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Margin="5"
-                    IsChecked="True"/>
-                <CheckBox
-                    Content="otrzymywanie ofert"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Margin="5"/>
-            </StackPanel>
-        </Grid>
-        <Grid
-            Grid.Row="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Zgoda na:"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Center"
+                Margin="5"/>
+            <CheckBox
+                Grid.Row="0"
+                Grid.Column="1"
+                Content="przetwarzanie danych"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="5"
+                IsChecked="True"/>
+            <CheckBox
+                Grid.Row="0"
+                Grid.Column="2"
+                Content="otrzymywanie ofert"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="5"/>
+            <Label
+                Grid.Row="1"
                 Grid.Column="0"
                 Content="Uwagi:"
                 Margin="5"
-                HorizontalContentAlignment="Center"/>
+                HorizontalContentAlignment="Left"/>
             <TextBox 
+                Grid.Row="1"
                 Grid.Column="1"
+                Grid.ColumnSpan="3"
                 Margin="5"
                 Padding="5"
                 AcceptsReturn="True"
